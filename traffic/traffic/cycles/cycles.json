@@ -2,7 +2,7 @@
     "cycle_tl1": [{
             "leds": ["TL1_RED"],
             "led_state": "on",
-            "duration": 8,
+            "duration": 3,
             "system_state": [{
                 "leds": ["TL2_RED"],
                 "led_state": "on"
@@ -11,12 +11,12 @@
         {
             "leds": ["TL1_RED", "TL1_YEL"],
             "led_state": "on",
-            "duration": 2
+            "duration": 1
         },
         {
             "leds": ["TL1_GRN"],
             "led_state": "on",
-            "duration": 12
+            "duration": 7
         },
         {
             "loop_cycle": {
@@ -42,28 +42,12 @@
     ],
     "cycle_tl2": [{
             "leds": ["TL2_GRN"],
-            "duration": 12,
+            "duration": 5,
             "led_state": "on",
             "system_state": [{
                 "leds": ["TL1_RED"],
                 "led_state": "on"
-            }]
-        },
-        {
-            "loop_cycle": {
-                "times": 4,
-                "cycle": [{
-                        "leds": ["TL2_GRN"],
-                        "led_state": "on",
-                        "duration": 1
-                    },
-                    {
-                        "leds": ["TL2_GRN"],
-                        "led_state": "off",
-                        "duration": 1
-                    }
-                ]
-            },
+            }],
             "next_cycle": {
                 "name": "tl1",
                 "start_index": 1
